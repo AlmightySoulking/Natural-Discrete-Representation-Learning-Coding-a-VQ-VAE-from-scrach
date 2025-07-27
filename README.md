@@ -13,21 +13,6 @@ The implementation demonstrates **Vector Quantized Variational AutoEncoders (VQ-
 
 ---
 
-## 📝 Table of Contents
-
-- [Introduction](#introduction)
-- [Model Architecture](#model-architecture)
-- [Getting Started](#getting-started)
-- [Training](#training)
-- [Results](#results)
-- [Dependencies](#dependencies)
-- [Paper Summary](#paper-summary)
-- [To-Do](#to-do)
-- [Citation](#citation)
-- [License](#license)
-
----
-
 ## 📌 Introduction
 
 Unlike standard VAEs that use continuous latent variables, **VQ-VAE** learns a discrete latent representation through **vector quantization**, enabling better compression and structure learning in the latent space. This model is especially useful in **image, audio, and video generation**.
@@ -44,8 +29,8 @@ The model consists of:
 - **Decoder**: Reconstructs the image from the quantized latent codes.
 
 The loss function is composed of:
-- **Reconstruction Loss:** $ \log p(x|z_q(x))$ ensures our output looks like the input and we will use Mean Squared Error
-- **Codebook Loss:** $||sg[z_e(x)] - e||_2^2 $ will update our codevectors in the codebook by moving them closer to the output of the encoder $z$, while not drilling down into the $min$ function by placing a stop gradient on $z$
+- **Reconstruction Loss:** $\log p(x|z_q(x))$ ensures our output looks like the input and we will use Mean Squared Error
+- **Codebook Loss:** $||sg[z_e(x)] - e||_2^2$ will update our codevectors in the codebook by moving them closer to the output of the encoder $z$, while not drilling down into the $min$ function by placing a stop gradient on $z$
 - **Commitment Loss:** $\beta||z_e(x) - sg[e]||_2^2$ is exactly the opposite of our codebook loss, but ensures the output of the encoder is close to our codevectors, and has a weight $\beta$ to allow for some divergence.
 
 ---
