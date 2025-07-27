@@ -1,0 +1,1 @@
+# Natural-Discrete-Representation-Learning-Coding-a-VQ-VAE-from-scrach
