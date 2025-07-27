@@ -19,7 +19,7 @@ Unlike standard VAEs that use continuous latent variables, **VQ-VAE** learns a d
 
 ---
 
-##🚀 Getting Started
+## 🚀 Getting Started
 Follow these steps to set up and run the project locally.
 
 **Prerequisites**
@@ -33,7 +33,7 @@ You'll need Python 3 and the following libraries installed:
 -tqdm
 -torchview (optional, for visualizing the model)
 
-
+---
 
 ## 🧠 Model Architecture
 
